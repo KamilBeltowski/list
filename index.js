@@ -10,7 +10,7 @@ const addElement = () => {
   channels.forEach(function (channel) {
     const clone = template.content.cloneNode(true);
 
-    clone.querySelector("li").textContent = channels;
+    clone.querySelector("li").textContent = channel;
 
     ul.appendChild(clone);
   });
