@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>channel list</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Rooms</h1>
+      <div class="img-wrapper">
+        <img src="search.svg" alt="search" />
+        <img src="rooms.svg" alt="rooms" />
+      </div>
+    </header>
+
+    <main class="main-content">
+      <ul id="list" class="channel-list">
+        <li id="channel" class="channel">
+          <div class="channel__image">
+            <img src="profile.svg" alt="profile" />
+          </div>
+          <div class="channel__message-box">
+            <p>The one with the Cameron's recruit...</p>
+            <p>My message</p>
+          </div>
+
+          <p class="channel__hours">3 hours ago</p>
+        </li>
+      </ul>
+    </main>
+    <button onclick="addElement()">Dodaj kanał</button>
+    <template id="channelTemplate">
+      <li id="channel" class="channel">
+        <div class="channel__image">
+          <img src="profile.svg" alt="profile" />
+        </div>
+        <div class="channel__message-box">
+          <p>The one with the Cameron's recruit...</p>
+          <p>My message</p>
+        </div>
+
+        <p class="channel__hours">3 hours ago</p>
+      </li>
+    </template>
+  </body>
+</html>
