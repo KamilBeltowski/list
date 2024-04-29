@@ -1,17 +1,27 @@
+// zmienna ze stanem aplikacji
+const channels = [];
+
 const addElement = () => {
-  const ul = document.getElementById("list");
+  // early return
+  const input = document.querySelector("#newChanelName");
+  if (!input || input.value === "") {
+    return;
+  }
 
+  channels.push(input.value);
+  input.value = "";
+
+  const ul = document.querySelector("#list");
   ul.innerHTML = "";
+  const template = document.querySelector("#channelTemplate");
 
-  const template = document.getElementById("channelTemplate");
-
-  const channels = ["nazwa 1", "nazwa 2", "Nowy kanal"];
-
-  channels.forEach(function (channel) {
+  channels.forEach((channel) => {
     const clone = template.content.cloneNode(true);
-
-    clone.querySelector("li").textContent = channel;
-
+    clone.querySelector("#channelName").textContent = channel;
     ul.appendChild(clone);
   });
 };
+
+// pobierz button i dodaj nasłuchiwanie -> oddzielenie struktury od javascriptu
+const button = document.querySelector("#addElement");
+button.addEventListener("click", addElement);
