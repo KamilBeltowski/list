@@ -24,22 +24,22 @@
           </div>
           <div class="channel__message-box">
             <p>The one with the Cameron's recruit...</p>
-            <p>My message</p>
           </div>
 
           <p class="channel__hours">3 hours ago</p>
         </li>
       </ul>
     </main>
-    <button onclick="addElement()">Dodaj kanał</button>
+    <input type="text" placeholder="nowa nazwa" id="newChannelName" />
+    <button id="addElement">Dodaj kanał</button>
+
     <template id="channelTemplate">
       <li id="channel" class="channel">
         <div class="channel__image">
           <img src="profile.svg" alt="profile" />
         </div>
         <div class="channel__message-box">
-          <p>The one with the Cameron's recruit...</p>
-          <p>My message</p>
+          <p id="channelName">The one with the Cameron's recruit...</p>
         </div>
 
         <p class="channel__hours">3 hours ago</p>
