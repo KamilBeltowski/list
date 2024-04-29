@@ -3,7 +3,7 @@ const channels = [];
 
 const addElement = () => {
   // early return
-  const input = document.querySelector("#newChanelName");
+  const input = document.querySelector("#newChannelName");
   if (!input || input.value === "") {
     return;
   }
